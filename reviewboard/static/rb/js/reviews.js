@@ -426,10 +426,10 @@ function linkifyText(text) {
              */
 
             var extra = '',
-                parts = url.match(/^(.*)(&[a-z]+;|\))/),
+                parts = url.match(/^(.*)(&[a-z]+;|\))$/),
                 openParen = url.match(/.*\(.*/);
 
-            if (parts != null && openParen == null ) {
+            if (parts != null && openParen == null) {
                 /* We caught an entity. Set it free. */
                 url = parts[1];
                 extra = parts[2];
